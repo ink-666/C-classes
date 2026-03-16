@@ -75,10 +75,10 @@ CSharpProject/
 ├── README.md # Этот файл с описанием
 └── .gitignore # Игнорируемые файлы
 
-
 ## 🔍 Детальный разбор кода
 
 ### Базовый класс Person
+
 ```csharp
 class Person
 {
@@ -90,9 +90,10 @@ class Person
         // Конструктор вызывается при создании любого Person или Employee
     }
 }
+```
+### Производный класс Employee
 
-Производный класс Employee
-class Employee : Person
+```class Employee : Person
 {
     public string Company { get; set; }
     
@@ -102,23 +103,26 @@ class Employee : Person
         Company = company;
     }
 }
+```
 
-Как передаются данные:
+### Как передаются данные:
 
 При создании new Employee("Иван", "Microsoft")
 Строка "Иван" передаётся через base(name) в конструктор Person
 Строка "Microsoft" сохраняется в свойстве Company
 Порядок выполнения: сначала конструктор Person, потом Employee
 
-Обобщённый метод Swap
-public void Swap<T>(ref T first, ref T second)
+### Обобщённый метод Swap
+
+```public void Swap<T>(ref T first, ref T second)
 {
     T temp = first;  // Сохраняем first во временную переменную
     first = second;  // Передаём second в first
     second = temp;   // Передаём temp (бывший first) в second
 }
+```
 
-✅ Вывод
+### ✅ Вывод
 
 Работа демонстрирует все ключевые концепции ООП в C#:
 
