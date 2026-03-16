@@ -22,25 +22,16 @@
 
 ## 📊 Диаграмма классов
 
-┌─────────────────┐
-│ Person │
-├─────────────────┤
-│ - Name: string │
-├─────────────────┤
-│ + Person(name) │
-│ + Print() │
-└─────────────────┘
-▲
-│
-┌─────────────────┐
-│ Employee │
-├─────────────────┤
-│ - Company: string│
-├─────────────────┤
-│ + Employee(name,│
-│ company) │
-│ + Print() │
-└─────────────────┘
+```markdown
+### Таблица классов
+
+| Класс | Родитель | Свойства | Методы | Конструктор |
+|-------|----------|----------|--------|-------------|
+| **Person** | Object | `Name: string` | `Print()` | `Person(name)` |
+| **Employee** | Person | `Company: string` | `Print()` (override) | `Employee(name, company)` |
+
+**Связь:** Employee → Person → Object
+```
 
 ## 🔧 Реализованные концепции
 
